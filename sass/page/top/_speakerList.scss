@@ -1,0 +1,22 @@
+@use "../../global" as *; //アスタリスクをつけてglobalフォルダから参照
+
+/*!
+page > top > speakerList
+------------------------------
+*/
+.speakerList {
+  margin-top: min(vw(20), 20px);
+}
+
+.speakerList > * + * {
+  margin-top: min(vw(5), 5px);
+}
+
+.speakerList-item {
+  display: flex;
+  font-size: clampVw(14, 14.8, 16, 768);
+}
+
+.speakerList-position {
+  width: 75%;
+}

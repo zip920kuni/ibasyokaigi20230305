@@ -1,0 +1,180 @@
+@use "../../global" as *; //アスタリスクをつけてglobalフォルダから参照
+
+/*!
+page > top > titleArea
+------------------------------
+*/
+.titleArea {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(90%, 600px);
+}
+
+.titleArea-mainTitle {
+  position: relative;
+  padding-bottom: min(vw(15), 15px);
+  font-family: "M PLUS Rounded 1c";
+  font-size: clampVw(40, 64, 96, 768);
+  font-weight: 700;
+}
+
+.titleArea-mainTitle-top {
+  margin-left: min(vw(40), 40px);
+}
+
+.titleArea-mainTitle-animationFirst {
+  display: inline-block;
+  box-decoration-break: clone;
+
+  animation-name: First;
+  animation-duration: .6s;
+  animation-fill-mode: forwards;
+
+  @keyframes First {
+    0% {
+      transform: scale(0);
+      background-image: none;
+    }
+    50% {
+      transform: scale(1) rotate(1440deg);
+    }
+    95% {
+      background-image: none;
+    }
+    100% {
+      background-image: linear-gradient($Cornflower-Blue-gradation);
+    }
+  }
+}
+
+.titleArea-mainTitle-animationSecond {
+  display: inline-block;
+  opacity: 0;
+  box-decoration-break: clone;
+
+  animation-name: Second;
+  animation-duration: .6s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+
+  @keyframes Second {
+    0% {
+      opacity: 0;
+      transform: translateY(20%);
+      background-image: none;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    95% {
+      opacity: 1;
+      transform: translateY(0);
+      background-image: none;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+      background-image: linear-gradient($Cornflower-Blue-gradation);
+    }
+  }
+}
+
+.titleArea-mainTitle-middle-inner {
+  display: inline-block;
+  position: relative;
+}
+
+.titleArea-mainTitle-balloon {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: -100%;
+  right: -100%;
+  width: min(vw(60), 150px);
+  aspect-ratio: 1 / 1;
+  background-color: $Electric-Purple;
+  border-radius: 50%;
+
+  @include responsive(md) {
+    top: -50%;
+    right: -200%;
+  }
+}
+
+.titleArea-mainTitle-balloon::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: min(vw(15), 30px);
+  aspect-ratio: 1 / 1;
+  background-color: $Electric-Purple;
+  clip-path: polygon(60% 0, 0% 100%, 100% 40%);
+  content: "";
+}
+
+.titleArea-mainTitle-animationThird {
+  opacity: 0;
+
+  animation-name: Third;
+  animation-duration: .6s;
+  animation-delay: 1.8s;
+  animation-fill-mode: forwards;
+
+  @keyframes Third {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+.titleArea-subTitle {
+  padding-top: min(vw(15), 15px);
+  border-top: 2px solid $White-Smoke;
+  font-size: clampVw(20, 30, 48, 768);
+  color: $Raw-Umber;
+}
+
+.titleArea-subTitle-animationFourth {
+  display: inline;
+  opacity: 0;
+  box-decoration-break: clone;
+
+  animation-name: Fourth;
+  animation-duration: .6s;
+  animation-delay: 3.5s;
+  animation-fill-mode: forwards;
+
+  @keyframes Fourth {
+    0% {
+      opacity: 0;
+      transform: translateY(20%);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    95% {
+      opacity: 1;
+      transform: translateY(0);
+      background-image: none;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+      background-image: linear-gradient($Black-gradation);
+    }
+  }
+}

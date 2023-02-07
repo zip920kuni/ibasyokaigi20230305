@@ -1,0 +1,49 @@
+@use "../global" as *; //アスタリスクをつけてglobalフォルダから参照
+
+/*!
+layout > header
+------------------------------
+*/
+.header {
+  position: fixed;
+  // position: relative;
+  z-index: 15;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: transparent;
+  transition: background-color .5s;
+}
+
+.header.is-transparent {
+  background-color: transparent;
+}
+
+.header.is-color {
+  background-color: $Light-Blue;
+}
+
+.header-column {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  // width: min(100%, 1310px);
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: min(vw(15), 15px);
+  padding-left: min(vw(15), 15px);
+}
+
+.header-observationPoint {
+  position: absolute;
+  top: min(vw(100), 100px);
+  left: 0;
+  width: 1px;
+  height: 1px;
+  background-color: transparent;
+}

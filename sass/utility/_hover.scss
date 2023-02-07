@@ -1,0 +1,15 @@
+@use "../global" as *; //アスタリスクをつけてglobalフォルダから参照
+
+/*!
+utility > hover
+------------------------------
+*/
+.Link {
+  transition: opacity .3s;
+  text-decoration: none;
+  color: currentColor;
+
+  @include hover {
+    opacity: .7;
+  }
+}

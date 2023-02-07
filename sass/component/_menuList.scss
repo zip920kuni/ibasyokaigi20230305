@@ -1,0 +1,52 @@
+@use "../global" as *; //アスタリスクをつけてglobalフォルダから参照
+
+/*!
+component > menuList
+------------------------------
+*/
+.menuList {
+  @include responsive(md) {
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+.menuList > * + * {
+  @include responsive(md) {
+    margin-left: min(vw(12), 40px);
+  }
+}
+
+.menuList-itemLink {
+  position: relative;
+  font-size: clampVw(14, 16, 18, 768);
+
+  // @include hover {
+  //   &::after {
+  //     transform-origin: left top;
+  //     transform: scale(1, 1);
+  //   }
+  // }
+}
+
+.menuList-itemLink::before {
+  position: absolute;
+  top: -75%;
+  left: -5%;
+  width: 110%;
+  height: 250%;
+  content: "";
+}
+
+// .menuList-itemLink::after {
+//   position: absolute;
+//   bottom: 0;
+//   left: -5%;
+//   width: 110%;
+//   height: 2px;
+//   background-color: currentColor;
+//   transform-origin: right top;
+//   transform: scale(0, 1);
+//   transition: transform .3s;
+//   content: "";
+// }

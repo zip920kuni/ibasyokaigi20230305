@@ -1,0 +1,56 @@
+@use "../../global" as *; //アスタリスクをつけてglobalフォルダから参照
+
+/*!
+page > top > scrollNavigation
+------------------------------
+*/
+.scrollNavigation {
+  position: relative;
+  z-index: 5;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include responsive(md) {
+    left: 2%;
+  }
+}
+
+.scrollNavigation::before {
+  position: absolute;
+  top: calc(min(vw(25), 45px) * -1);
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(vw(2), 4px);
+  height: min(vw(55), 70px);
+  background-color: currentColor;
+  content: "";
+
+  animation-name: lineMove;
+  animation-duration: 1.6s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  @keyframes lineMove {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: min(vw(55), 70px);
+    }
+  }
+}
+
+.scrollNavigation-inner {
+  position: absolute;
+  top: calc(min(vw(50), 80px) * -1);
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 700;
+  color: currentColor;
+
+  @include responsive(md) {
+    top: -40px;
+    margin-left: 15px;
+    writing-mode: vertical-rl;
+  }
+}

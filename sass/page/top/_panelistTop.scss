@@ -1,0 +1,26 @@
+@use "../../global" as *; //アスタリスクをつけてglobalフォルダから参照
+
+/*!
+page > top > panelistTop
+------------------------------
+*/
+.panelistTopList {
+  display: grid;
+  row-gap: min(vw(40), 40px);
+  margin-top: min(vw(50), 50px);
+
+  @include responsive(md) {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: min(vw(40), 40px);
+  }
+}
+
+.panelistTopList-item {
+  width: min(100%, 360px);
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+  box-shadow: 5px 5px 5px rgba(#000, .2);
+  border-radius: 20px;
+  background-color: $Light-Blue;
+}

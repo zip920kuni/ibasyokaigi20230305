@@ -1,0 +1,79 @@
+@use "../global" as *; //アスタリスクをつけてglobalフォルダから参照
+
+/*!
+component > media
+------------------------------
+*/
+.media {
+  position: relative;
+  margin-top: min(vw(50), 50px);
+}
+
+.media::before {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 55%;
+  background-image: linear-gradient($Light-Blue-gradation);
+  content: "";
+
+  @include responsive(md) {
+    top: 25%;
+    left: 25%;
+    width: 75%;
+    height: 85%;
+  }
+}
+
+.mediaReverse::before {
+  @include responsive(md) {
+    right: 25%;
+    left: auto;
+  }
+}
+
+.media-image {
+  width: min(100%, 360px);
+  aspect-ratio: 3 / 4;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include responsive(md) {
+    width: min(40%, 240px);
+  }
+}
+
+.media-image-inner {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+.media-body {
+  margin-top: min(vw(30), 30px);
+
+  @include responsive(md) {
+    width: 60%;
+    margin-top: 8%;
+  }
+}
+
+.media-bodyLarge {
+  @include responsive(md) {
+    margin-top: 15%;
+  }
+}
+
+.media-body-name {
+  font-size: clampVw(20, 28, 36, 768);
+  font-weight: 700;
+}
+
+.media-body-description {
+  margin-top: min(vw(20), 20px);
+  font-size: clampVw(16, 16.8, 18, 768);
+  line-height: 1.8;
+  @include lineHeightCrop(1.8);
+}

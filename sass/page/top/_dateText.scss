@@ -1,0 +1,27 @@
+@use "../../global" as *; //アスタリスクをつけてglobalフォルダから参照
+
+/*!
+page > top > dateText
+------------------------------
+*/
+.dateText {
+  position: relative;
+  top: -5%;
+  left: -5%;
+  font-size: clampVw(20, 24, 32, 768);
+  font-weight: 700;
+}
+
+.dateText::before {
+  position: absolute;
+  top: -75%;
+  left: -5%;
+  width: 110%;
+  height: 250%;
+  content: "";
+}
+
+.dateText-small {
+  display: inline-block;
+  font-size: clampVw(16, 18.8, 20, 768);
+}

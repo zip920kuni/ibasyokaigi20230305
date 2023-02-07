@@ -1,0 +1,43 @@
+@use "../../global" as *; //アスタリスクをつけてglobalフォルダから参照
+
+/*!
+page > top > lectureArea
+------------------------------
+*/
+.lectureArea-part {
+  margin-top: min(vw(20), 20px);
+
+  @include responsive(md) {
+    margin-top: 0;
+  }
+}
+
+.lectureArea-title {
+  margin-top: min(vw(15), 15px);
+  font-size: clampVw(16, 24, 48, 768);
+  font-weight: 700;
+}
+
+.lectureArea-subTitle {
+  margin-top: min(vw(5), 5px);
+  font-size: clampVw(16, 16.8, 18, 768);
+}
+
+.lectureArea-speaker {
+  margin-top: min(vw(20), 20px);
+  font-size: clampVw(14, 14.8, 16, 768);
+}
+
+.lectureArea-speaker-position {
+  @include responsive(md) {
+    width: 75%;
+  }
+}
+
+.lectureArea-speaker-name {
+  margin-top: min(vw(5), 5px);
+
+  @include responsive(md) {
+    margin-top: 0;
+  }
+}

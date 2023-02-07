@@ -1,0 +1,26 @@
+@use "../global" as *; //アスタリスクをつけてglobalフォルダから参照
+
+/*!
+layout > container
+------------------------------
+*/
+.container {
+  width: min(100%, 1310px);
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: min(vw(15), 15px);
+  padding-left: min(vw(15), 15px);
+
+  // @include responsive(md) {
+  //   padding-right: 0;
+  //   padding-left: 0;
+  // }
+}
+
+.containerTight {
+  width: min(100%, 940px);
+}
+
+.containerSnug {
+  width: min(100%, 1140px);
+}

@@ -1,0 +1,44 @@
+@use "../../global" as *; //アスタリスクをつけてglobalフォルダから参照
+
+/*!
+page > top > programList
+------------------------------
+*/
+.programList {
+  padding-top: min(vw(100), 100px);
+}
+
+.programList > * + * {
+  padding-top: min(vw(30), 30px);
+}
+
+.programList-item {
+  display: flex;
+}
+
+.programList-inner:not(:last-of-type) {
+  padding-bottom: min(vw(30), 30px);
+}
+
+.programList-item-time {
+  width: 40%;
+  font-size: clampVw(16, 18, 24, 768);
+  font-weight: 700;
+
+  @include responsive(md) {
+    width: 20%;
+  }
+}
+
+.programList-item-description {
+  font-size: clampVw(16, 18, 24, 768);
+
+  @include responsive(md) {
+    width: 80%;
+  }
+}
+
+.programList-innerColor {
+  padding-bottom: min(vw(30), 30px);
+  background-image: linear-gradient($Light-Blue-gradation);
+}

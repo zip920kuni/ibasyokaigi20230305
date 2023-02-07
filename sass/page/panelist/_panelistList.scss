@@ -1,0 +1,43 @@
+@use "../../global" as *; //アスタリスクをつけてglobalフォルダから参照
+
+/*!
+page > panelist > panelistList
+------------------------------
+*/
+.panelist {
+  padding-top: min(vw(70), 70px);
+}
+
+.panelistList {
+  padding-top: min(vw(30), 60px);
+  padding-right: min(vw(30), 60px);
+  padding-bottom: min(vw(30), 60px);
+  padding-left: min(vw(30), 60px);
+  border: 2px solid $Cornflower-Blue;
+  border-radius: 20px;
+}
+
+.panelist-List-announce {
+  font-size: clampVw(20, 24, 32, 768);
+}
+
+.panelistList-inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: min(vw(20), 30px);
+  column-gap: min(vw(20), 30px);
+  margin-top: min(vw(20), 40px);
+
+  @include responsive(md) {
+    padding-left: 15%;
+  }
+}
+
+.panelistList-inner-item {
+  font-size: clampVw(16, 18.8, 24, 768);
+  font-weight: 700;
+}
+
+.panelist-List-comment {
+  margin-top: min(vw(20), 40px);
+}

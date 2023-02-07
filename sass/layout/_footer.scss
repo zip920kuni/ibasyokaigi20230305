@@ -1,0 +1,11 @@
+@use "../global" as *; //アスタリスクをつけてglobalフォルダから参照
+
+/*!
+layout > footer
+------------------------------
+*/
+.footer {
+  padding-top: min(vw(50), 50px);
+  padding-bottom: min(vw(50), 50px);
+  background-color: $Light-Blue;
+}

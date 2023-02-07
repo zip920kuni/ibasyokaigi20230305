@@ -1,0 +1,24 @@
+@use "../global" as *; //アスタリスクをつけてglobalフォルダから参照
+
+/*!
+foundation > base
+------------------------------
+*/
+html {
+  //ユーザーがブラウザで設定したフォントサイズを反映
+  font-size: 100%;
+  // ハンバーガーメニュー位置固定用
+  overflow-y: scroll;
+}
+
+body {
+  // SP用
+  width: 100%;
+  //ベースの色変更は_color.scssファイルから設定
+  color: #000;
+  //フォント変更は_font.scssファイルから設定
+  font-family: $base-font-family;
+  font-size: clampVw(14, 14.8, 16, 768);
+  // 監視点用
+  position: relative;
+}

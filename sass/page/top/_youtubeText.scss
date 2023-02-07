@@ -1,0 +1,30 @@
+@use "../../global" as *; //アスタリスクをつけてglobalフォルダから参照
+
+/*!
+page > top > youtubeText
+------------------------------
+*/
+.youtubeText {
+  position: relative;
+  font-size: clampVw(16, 18, 24, 768);
+  font-weight: 700;
+}
+
+.youtubeText::before {
+  position: absolute;
+  top: -75%;
+  left: -5%;
+  width: 110%;
+  height: 250%;
+  content: "";
+}
+
+.youtubeText-large {
+  display: inline-block;
+}
+
+.youtubeText-small {
+  display: inline-block;
+  font-size: clampVw(12, 12.8, 14, 768);
+  font-weight: 400;
+}

@@ -1,0 +1,26 @@
+@use "../global" as *; //アスタリスクをつけてglobalフォルダから参照
+
+/*!
+component > headingLv2Area
+------------------------------
+*/
+.headingLv2Area {
+  text-align: center;
+}
+
+.headingLv2Area-text {
+  position: relative;
+  padding-left: 20px;
+  font-size: clampVw(28, 32, 48, 768);
+}
+
+.headingLv2Area-text::before {
+  position: absolute;
+  top: 55%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 1em;
+  background-color: $Cornflower-Blue;
+  content: "";
+}

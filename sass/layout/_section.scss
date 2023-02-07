@@ -1,0 +1,36 @@
+@use "../global" as *; //アスタリスクをつけてglobalフォルダから参照
+
+/*!
+layout > section
+------------------------------
+*/
+.section {
+  padding-top: min(vw(150), 150px);
+}
+
+.sectionInformationTop {
+  position: relative;
+}
+
+.sectionInformationTop::before {
+  position: absolute;
+  z-index: -1;
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-image: linear-gradient($Light-Blue-gradation);
+  content: "";
+}
+
+.sectionAccessTop {
+  padding-bottom: min(vw(100), 100px);
+}
+
+.sectionUnder {
+  padding-top: min(vw(70), 70px);
+}
+
+.sectionPanelistDetail {
+  padding-top: min(vw(100), 100px);
+}

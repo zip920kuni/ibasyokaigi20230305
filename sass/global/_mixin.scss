@@ -1,0 +1,13 @@
+// タッチデバイス使用時ホバーOFF
+// Tab移動でフォーカス時にもわかりやすく
+@mixin hover() {
+  &:focus {
+    @content;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @content;
+    }
+  }
+}

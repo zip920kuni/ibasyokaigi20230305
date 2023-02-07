@@ -1,0 +1,14 @@
+@use "../../global" as *; //アスタリスクをつけてglobalフォルダから参照
+
+/*!
+page > panelist > panelistDetailList
+------------------------------
+*/
+.panelistDetailList {
+  margin-top: min(vw(100), 100px);
+  margin-bottom: min(vw(200), 200px);
+}
+
+.panelistDetailList > * + * {
+  margin-top: min(vw(150), 150px);
+}

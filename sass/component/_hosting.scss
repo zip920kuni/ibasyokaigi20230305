@@ -1,0 +1,26 @@
+@use "../global" as *; //アスタリスクをつけてglobalフォルダから参照
+
+/*!
+component > hosting
+------------------------------
+*/
+.hosting {
+  display: flex;
+  width: min(100%, 380px);
+  margin-right: auto;
+  margin-left: auto;
+  font-size: clampVw(16, 18, 24, 768);
+
+  @include responsive(md) {
+    width: 50%;
+  }
+}
+
+.hosting-title {
+  width: 40%;
+  font-weight: 700;
+
+  @include responsive(md) {
+    width: 20%;
+  }
+}

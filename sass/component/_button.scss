@@ -1,0 +1,83 @@
+@use "../global" as *; //アスタリスクをつけてglobalフォルダから参照
+
+/*!
+component > button
+------------------------------
+*/
+.button {
+  display: block;
+  position: relative;
+  width: min(100%, 400px);
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: min(vw(10), 10px);
+  padding-left: min(vw(10), 10px);
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: transparent;
+  font-size: clampVw(14, 15, 16, 768);
+  color: #000;
+  cursor: pointer;
+
+  // @include hover {
+  //   &::before {
+  //     transform-origin: left top;
+  //     transform: scale(1, 1);
+  //   }
+  // }
+}
+
+// .button::before {
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+//   z-index: -1;
+//   background-color: #000;
+//   transform-origin: left top;
+//   transform: scale(0, 1);
+//   transition: transform .3s;
+//   content: "";
+// }
+
+// .button-arrowRight {
+//   position: relative;
+//   padding-right: min(vw(16), 1em);
+//   padding-left: min(vw(16), 1em);
+
+//   @include hover {
+//     &::after {
+//       border-right: 3px solid #000;
+//       border-bottom: 3px solid #000;
+//     }
+//   }
+// }
+
+// .button-arrowRight::after {
+//   position: absolute;
+//   top: 50%;
+//   right: 1em;
+//   transform: translateY(-50%) rotate(-45deg);
+//   width: 10px;
+//   aspect-ratio: 1 / 1;
+//   border-right: 3px solid #FFF;
+//   border-bottom: 3px solid #FFF;
+//   transition: border .3s;
+//   content: "";
+// }
+
+.buttonSubmit {
+  margin-top: min(vw(20), 20px);
+  padding-top: min(vw(20), 20px);
+  padding-bottom: min(vw(20), 20px);
+  border: 1px solid #000;
+  background-color: $Light-Blue;
+  font-size: clampVw(16, 18, 24, 768);
+
+  @include hover {
+    border: 1px solid $Cornflower-Blue;
+    background-color: #FFF;
+    color: $Cornflower-Blue;
+  }
+}

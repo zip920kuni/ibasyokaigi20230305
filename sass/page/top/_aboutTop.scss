@@ -1,0 +1,44 @@
+@use "../../global" as *; //アスタリスクをつけてglobalフォルダから参照
+
+/*!
+page > top > aboutTop
+------------------------------
+*/
+.aboutTop {
+  margin-top: min(vw(50), 50px);
+}
+
+.aboutTop-image {
+  width: min(100%, 640px);
+  aspect-ratio: 3 / 2;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include responsive(md) {
+    width: 50%;
+    margin: 0;
+  }
+}
+
+.aboutTop-image-inner {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.aboutTop-body {
+  margin-top: min(vw(50), 50px);
+
+  @include responsive(md) {
+    align-self: center;
+    width: 50%;
+    margin-top: 0;
+    padding-left: 4%;
+  }
+}
+
+.aboutTop-body-description {
+  font-size: clampVw(16, 18.8, 20, 768);
+  line-height: 1.8;
+  @include lineHeightCrop(1.8);
+}

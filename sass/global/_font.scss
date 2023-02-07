@@ -1,0 +1,56 @@
+// font-familyの変数定義
+$base-font-family: "Noto Sans JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", sans-serif;
+
+// フォントサイズ16pxを起点にしたremのサイズ指定
+$base-font-size: 16;
+@function rem($pixels) {
+  @return calc($pixels / $base-font-size) * 1rem;
+}
+
+// モニタサイズ375pxを起点にしたvwのサイズ指定
+@function vw($size, $viewport: 375) {
+  $rate: calc(100 / $viewport);
+  @return $rate * $size * 1vw;
+}
+
+// 引数のフォントサイズを起点にしたemのサイズ指定
+@function em($pixels, $fontSize: 16) {
+  @return calc($pixels / $fontSize) * 1em;
+}
+
+// フォントサイズ16px、モニタサイズ1920pxを起点にしたclamp関数
+@function clampVw($min, $size, $max, $viewport: 1920) {
+  $min: calc($min / $base-font-size) * 1rem;
+  $max: calc($max / $base-font-size) * 1rem;
+  $rate: calc(100 / $viewport);
+  $size_vw: $rate * $size * 1vw;
+  @return clamp($min, $size_vw, $max);
+}
+
+// line-heightの変数定義
+$leading-none: 1 !default;
+$leading-x-tight: 1.45 !default;
+$leading-tight: 1.5 !default;
+$leading-snug: 1.6 !default;
+$leading-normal: 1.7 !default;
+$leading-relaxed: 1.8 !default;
+$leading-loose: 2 !default;
+$leading-x-loose: 3 !default;
+
+// lineHeightCrop (line-heightの不要な余白を打ち消す)
+@mixin lineHeightCrop($line-height) {
+  &::before {
+    display: block;
+    width: 0;
+    height: 0;
+    margin-top: calc((1 - #{$line-height}) * .5em);
+    content: "";
+  }
+  &::after {
+    display: block;
+    width: 0;
+    height: 0;
+    margin-bottom: calc((1 - #{$line-height}) * .5em);
+    content: "";
+  }
+}

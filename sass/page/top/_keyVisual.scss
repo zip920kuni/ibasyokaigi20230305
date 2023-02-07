@@ -1,0 +1,136 @@
+@use "../../global" as *; //アスタリスクをつけてglobalフォルダから参照
+
+/*!
+page > top > keyVisual
+------------------------------
+*/
+.keyVisual {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include responsive(md) {
+    height: 800px;
+  }
+}
+
+.keyVisual::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(#FFF, .5);
+  content: "";
+}
+
+.keyVisual-sun {
+  display: block;
+  position: absolute;
+  top: 10%;
+  width: min(60%, 300px);
+  aspect-ratio: 1 / 1;
+  color: currentColor;
+  text-decoration-color: $Dark-Red;
+
+  @include hover {
+    text-decoration: none;
+  }
+}
+
+.keyVisual-sun-inner {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.keyVisual-star {
+  display: block;
+  position: absolute;
+  bottom: 10%;
+  width: min(45%, 300px);
+  aspect-ratio: 1 / 1;
+  color: currentColor;
+  text-decoration-color: $Dark-Red;
+  text-decoration-skip-ink: none;
+
+  @include hover {
+    text-decoration: none;
+  }
+
+  @include responsive(md) {
+    left: 5%;
+  }
+}
+
+.keyVisual-star-inner {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.keyVisual-moon {
+  display: block;
+  position: absolute;
+  bottom: 10%;
+  right: 0;
+  right: min(vw(15), 15px);
+  width: min(40%, 200px);
+  aspect-ratio: 1 / 1;
+  color: currentColor;
+  text-decoration-color: $Dark-Red;
+
+  @include hover {
+    text-decoration: none;
+  }
+
+  @include responsive(md) {
+    right: 5%;
+  }
+}
+
+.keyVisual-moon-inner {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: $Cream-Brulee;
+  border-radius: 50%;
+}
+
+.keyVisual-moon-inner-text {
+  font-size: clampVw(20, 24, 32, 768);
+  font-weight: 700;
+}
+
+.keyVisual-animationFifth {
+  opacity: 0;
+
+  animation-name: Fifth;
+  animation-duration: .6s;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+
+  @keyframes Fifth {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}

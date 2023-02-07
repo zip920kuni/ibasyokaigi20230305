@@ -1,0 +1,10 @@
+@use "../global" as *; //アスタリスクをつけてglobalフォルダから参照
+
+/*!
+component > copyright
+------------------------------
+*/
+.copyright {
+  margin-top: min(vw(20), 20px);
+  text-align: center;
+}

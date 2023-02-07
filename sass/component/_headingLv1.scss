@@ -1,0 +1,14 @@
+@use "../global" as *; //アスタリスクをつけてglobalフォルダから参照
+
+/*!
+component > headingLv1
+------------------------------
+*/
+.headingLv1 {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  font-size: clampVw(48, 64, 80, 768);
+  text-align: center;
+}

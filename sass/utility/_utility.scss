@@ -1,0 +1,111 @@
+@use "../global" as *; //アスタリスクをつけてglobalフォルダから参照
+
+/*!
+utility > utility
+------------------------------
+*/
+.OnlySp {
+  @include responsive(md) {
+    display: none;
+  }
+}
+
+.OnlyPc {
+  display: none;
+
+  @include responsive(md) {
+    display: block;
+  }
+}
+
+.OnlyPcFlex {
+  display: none;
+
+  @include responsive(md) {
+    display: flex;
+  }
+}
+
+.FlexPc {
+  display: block;
+
+  @include responsive(md) {
+    display: flex;
+  }
+}
+
+.FlexReversePc {
+  display: block;
+
+  @include responsive(md) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+.TextCenter {
+  text-align: center;
+}
+
+.TextRight {
+  text-align: right;
+}
+
+.FontItalic {
+  font-style: italic;
+  color: $Dark-Red;
+}
+
+.ColorRed {
+  color: $Dark-Red;
+}
+
+.ColorOrange {
+  color: $Orange-Peel;
+}
+
+.ColorYellow {
+  color: $Cream-Brulee;
+}
+
+.ColorGreen {
+  color: $Gossip;
+}
+
+.ColorBlue {
+  color: $Blue;
+}
+
+.ColorIndigoBlue {
+  color: $Denim;
+}
+
+.ColorPurpleOuter {
+  color: #FFF;
+}
+
+.InlineBlock {
+  display: inline-block;
+}
+
+.UnderLine {
+  text-decoration: underline;
+}
+
+.FontWeightBold {
+  font-weight: 700;
+}
+
+// 以下js用
+.Is-Out {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15%);
+}
+
+.Is-In {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: opacity .5s, visibility .5s, transform .5s;
+}

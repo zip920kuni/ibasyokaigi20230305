@@ -1,0 +1,18 @@
+@use "../global" as *; //アスタリスクをつけてglobalフォルダから参照
+
+/*!
+component > hamburgerMenu
+------------------------------
+*/
+.hamburgerMenu {
+  position: relative;
+  top: 20%;
+}
+
+.hamburgerMenuList > * + * {
+  margin-top: min(vw(50), 50px);
+}
+
+.hamburgerMenuList-itemLink {
+  font-size: clampVw(20, 24, 32, 768);
+}

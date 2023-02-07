@@ -1,0 +1,66 @@
+@use "../global" as *; //アスタリスクをつけてglobalフォルダから参照
+
+/*!
+component > breadcrumb
+------------------------------
+*/
+.breadcrumb {
+  position: relative;
+  padding-top: min(vw(20), 30px);
+  padding-bottom: min(vw(20), 30px);
+}
+
+.breadcrumbList > * + * {
+  position: relative;
+  margin-left: 20px;
+}
+
+.breadcrumbList > * + *::after {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: -14px;
+  transform: translateY(-50%);
+  width: 10px;
+  aspect-ratio: 1 / 1;
+  clip-path: polygon(0% 0%, 0% 100%, 100% 50%);
+  background-color: currentColor;
+  content: "";
+}
+
+.breadcrumbList-item {
+  display: inline-block;
+  position: relative;
+  font-size: clampVw(14, 14.8, 16, 768);
+}
+
+.breadcrumbList-itemLink {
+  position: relative;
+  text-decoration: none;
+  color: currentColor;
+
+  // @include hover {
+  //   &::before {
+  //     transform-origin: left top;
+  //     transform: scale(1, 1);
+  //   }
+  // }
+}
+
+// .breadcrumbList-itemLink::before {
+//   position: absolute;
+//   bottom: 0;
+//   left: -5%;
+//   width: 110%;
+//   height: 2px;
+//   background-color: currentColor;
+//   content: "";
+//   transform-origin: right top;
+//   transform: scale(0, 1);
+//   transition: transform .3s;
+// }
+
+.breadcrumbList > * + * span,
+.breadcrumbList-item > span {
+  vertical-align: top;
+}

@@ -1,0 +1,23 @@
+// ブレークポイントの設定
+$breakpoints: (
+  'xs': (min-width: 0),
+  'sm': (min-width: 576px),
+  'md': (min-width: 768px),
+  'lg': (min-width: 992px),
+  'xl': (min-width: 1200px),
+  '2xl': (min-width: 1400px),
+  'pc': (min-width: 900px)
+) !default;
+
+@mixin responsive($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media print, screen and #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+
+  // マップ型で定義されていない値が呼び出された時はエラーを返す
+  @else {
+    @error "指定されたブレークポイントは定義されていません。" + "指定できるブレークポイントは次のとおりです。 -> #{map-keys($breakpoints)}";
+  }
+}

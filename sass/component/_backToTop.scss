@@ -1,0 +1,65 @@
+@use "../global" as *; //アスタリスクをつけてglobalフォルダから参照
+
+/*!
+component > backToTop
+------------------------------
+*/
+.backToTop-observationPoint {
+  position: absolute;
+  top: 600px;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  background-color: transparent;
+}
+
+.backToTop {
+  position: fixed;
+  z-index: 15;
+  right: 25px;
+  bottom: 25px;
+  width: min(15%, 50px);
+  aspect-ratio: 1/1;
+  border: 1px solid #FFF;
+  border-radius: 50%;
+  background-color: $Light-Blue;
+  transition: opacity .3s, visibility .3s;
+
+  @include hover {
+    transform: scale(1.1, 1.1);
+  }
+}
+
+.backToTop::before {
+  position: absolute;
+  // top: 50%;
+  top: 20%;
+  left: 50%;
+  // transform: translate(-50%, -75%);
+  transform: translateX(-50%);
+  width: min(30%, 14px);
+  aspect-ratio: 1/1;
+  clip-path: polygon(50% 50%, 0% 100%, 100% 100%);
+  background-color: #FFF;
+  content: "";
+}
+
+.backToTop::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: rem(10);
+  color: #FFF;
+  content: "Top";
+}
+
+.backToTop.is-hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.backToTop.is-active {
+  opacity: 1;
+  visibility: visible;
+}

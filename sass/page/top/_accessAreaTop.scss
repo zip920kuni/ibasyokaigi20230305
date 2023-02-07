@@ -1,0 +1,65 @@
+@use "../../global" as *; //アスタリスクをつけてglobalフォルダから参照
+
+/*!
+page > top > accessAreaTop
+------------------------------
+*/
+.accessAreaTop {
+  margin-top: min(vw(50), 50px);
+}
+
+.accessAreaTop-map {
+  width: min(100%, 600px);
+  aspect-ratio: 4 / 3;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include responsive(md) {
+    width: 60%;
+  }
+}
+
+.accessAreaTop-map-inner {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+
+.accessAreaTopList {
+  width: min(100%, 500px);
+  margin-top: min(vw(50), 50px);
+  margin-right: auto;
+  margin-left: auto;
+
+  @include responsive(md) {
+    width: 40%;
+    align-self: center;
+    margin-top: 0;
+    padding-left: 4%;
+  }
+}
+
+.accessAreaTopList > * + * {
+  padding-top: min(vw(15), 15px);
+  border-top: 1px dotted #000;
+}
+
+.accessAreaTopList-item {
+  display: flex;
+
+  @include responsive(md) {
+    display: block;
+  }
+}
+
+.accessAreaTopList-item:not(:last-of-type) {
+  padding-bottom: min(vw(15), 15px);
+}
+
+.accessAreaTopList-item-title {
+  width: 25%;
+  font-size: clampVw(16, 18, 24, 768);
+
+  @include responsive(md) {
+    width: 100%;
+  }
+}

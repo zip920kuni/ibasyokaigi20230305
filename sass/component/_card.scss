@@ -1,0 +1,60 @@
+@use "../global" as *; //アスタリスクをつけてglobalフォルダから参照
+
+/*!
+component > card
+------------------------------
+*/
+.card-image {
+  width: min(100%, 360px);
+  aspect-ratio: 3 / 4;
+
+  @include responsive(md) {
+    width: min(100%, 280px);
+  }
+}
+
+.card-image-inner {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+.card-body {
+  padding-top: min(vw(20), 20px);
+  padding-right: min(vw(30), 30px);
+  padding-bottom: min(vw(20), 20px);
+  padding-left: min(vw(30), 30px);
+  border-right: 1px solid $Light-Blue;
+  border-bottom: 1px solid $Light-Blue;
+  border-left: 1px solid $Light-Blue;
+  background-color: $Light-Blue;
+}
+
+.card-body-name {
+  padding-bottom: min(vw(20), 20px);
+  font-size: clampVw(20, 24, 32, 768);
+  font-weight: 700;
+}
+
+.card-body-inner {
+  width: min(75%, 270px);
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: min(vw(20), 20px);
+  border-top: 1px dotted #000;
+
+  @include responsive(md) {
+    width: 100%;
+  }
+}
+
+.card-body-inner-comment {
+  width: min(75%, 270px);
+  margin-right: auto;
+  margin-left: auto;
+  font-size: clampVw(16, 16.8, 18, 768);
+
+  @include responsive(md) {
+    width: min(100%, 170px);
+  }
+}

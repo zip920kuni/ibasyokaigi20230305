@@ -1,0 +1,45 @@
+@use "../global" as *; //アスタリスクをつけてglobalフォルダから参照
+
+/*!
+component > query
+------------------------------
+*/
+.query {
+  width: min(100%, 380px);
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: min(vw(20), 20px);
+
+  @include responsive(md) {
+    width: 50%;
+    margin-top: 0;
+  }
+}
+
+.query-title {
+  font-size: clampVw(16, 18, 24, 768);
+  font-weight: 700;
+}
+
+.query-item-top {
+  display: flex;
+  margin-top: min(vw(5), 5px);
+  font-size: clampVw(16, 16.8, 18, 768);
+
+  @include responsive(md) {
+    margin-top: 0;
+  }
+}
+
+.query-item-top-name {
+  margin-left: min(vw(10), 10px);
+}
+
+.query-item-bottom {
+  display: flex;
+  font-size: clampVw(16, 16.8, 18, 768);
+}
+
+.query-item-bottom-fax {
+  margin-left: min(vw(15), 15px);
+}
