@@ -757,6 +757,7 @@ component > media
   font-size: clamp(1rem, 2.1875vw, 1.125rem);
   line-height: 1.8;
 }
+
 .media-body-description::before {
   display: block;
   width: 0;
@@ -764,6 +765,7 @@ component > media
   margin-top: calc((1 - 1.8) * 0.5em);
   content: "";
 }
+
 .media-body-description::after {
   display: block;
   width: 0;
@@ -778,8 +780,6 @@ component > gradationArea
 */
 .gradationArea {
   position: relative;
-  margin-right: auto;
-  margin-left: auto;
   border-radius: 20px;
 }
 
@@ -964,7 +964,6 @@ utility > hover
 utility > utility
 ------------------------------
 */
-
 .OnlyPc {
   display: none;
 }
