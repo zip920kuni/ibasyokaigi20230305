@@ -25,6 +25,7 @@ page > top > youtubeArea
 }
 
 .youtubeArea-buttonArea {
+  justify-content: center;
   margin-top: min(vw(30), 30px);
 }
 
@@ -33,6 +34,6 @@ page > top > youtubeArea
 
   @include responsive(md) {
     margin-top: 0;
-    margin-left: min(vw(20), 20px);
+    margin-left: min(vw(30), 30px);
   }
 }

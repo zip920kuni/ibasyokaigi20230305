@@ -641,6 +641,9 @@ page > top > youtubeArea
 }
 
 .youtubeArea-buttonArea {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: min(8vw, 30px);
 }
 
@@ -936,7 +939,7 @@ sp
 
   .youtubeArea-buttonArea > * + * {
     margin-top: 0;
-    margin-left: min(5.3333333333vw, 20px);
+    margin-left: min(8vw, 30px);
   }
 
   .panelistTopList {
