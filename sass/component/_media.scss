@@ -34,6 +34,16 @@ component > media
   }
 }
 
+.mediaLarge::before {
+  top: 30%;
+  height: 75%;
+
+  @include responsive(md) {
+    top: 25%;
+    height: 80%;
+  }
+}
+
 .media-image {
   width: min(100%, 360px);
   aspect-ratio: 3 / 4;

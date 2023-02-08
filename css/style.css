@@ -801,6 +801,17 @@ component > media
   }
 }
 
+.mediaLarge::before {
+  top: 30%;
+  height: 75%;
+}
+@media print, screen and (min-width: 768px) {
+  .mediaLarge::before {
+    top: 25%;
+    height: 80%;
+  }
+}
+
 .media-image {
   width: min(100%, 360px);
   aspect-ratio: 3/4;
@@ -1253,7 +1264,7 @@ page > top > titleArea
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: min(90%, 600px);
+  width: min(90%, 700px);
 }
 @media print, screen and (min-width: 768px) {
   .titleArea {
@@ -1551,7 +1562,7 @@ page > top > aboutTop
 
 .aboutTop-image {
   width: min(100%, 640px);
-  aspect-ratio: 3/2;
+  aspect-ratio: 1852/1435;
   margin-right: auto;
   margin-left: auto;
 }
@@ -1564,7 +1575,7 @@ page > top > aboutTop
 
 .aboutTop-image-inner {
   width: 100%;
-  aspect-ratio: 3/2;
+  aspect-ratio: 1852/1435;
   -o-object-fit: cover;
      object-fit: cover;
 }
