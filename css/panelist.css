@@ -1,0 +1,63 @@
+/*!
+page > panelist > panelistList
+------------------------------
+*/
+.panelist {
+  padding-top: min(18.6666666667vw, 70px);
+}
+
+.panelistList {
+  padding-top: min(8vw, 60px);
+  padding-right: min(8vw, 60px);
+  padding-bottom: min(8vw, 60px);
+  padding-left: min(8vw, 60px);
+  border: 2px solid #4A86E8;
+  border-radius: 20px;
+}
+
+.panelist-List-announce {
+  font-size: clamp(1.25rem, 3.125vw, 2rem);
+}
+
+.panelistList-inner {
+  -webkit-column-gap: min(5.3333333333vw, 30px);
+     -moz-column-gap: min(5.3333333333vw, 30px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+          column-gap: min(5.3333333333vw, 30px);
+  row-gap: min(5.3333333333vw, 30px);
+  margin-top: min(5.3333333333vw, 40px);
+}
+
+.panelistList-inner-item {
+  font-weight: 700;
+  font-size: clamp(1rem, 2.4479166667vw, 1.5rem);
+}
+
+.panelist-List-comment {
+  margin-top: min(5.3333333333vw, 40px);
+}
+
+/*!
+page > panelist > panelistDetailList
+------------------------------
+*/
+.panelistDetailList {
+  margin-top: min(26.6666666667vw, 100px);
+  margin-bottom: min(53.3333333333vw, 200px);
+}
+
+.panelistDetailList > * + * {
+  margin-top: min(40vw, 150px);
+}
+
+/*!
+sp
+------------------------------
+*/
+@media print, screen and (min-width: 768px) {
+  .panelistList-inner {
+    padding-left: 15%;
+  }
+}
+/*# sourceMappingURL=panelist.css.map */
