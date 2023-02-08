@@ -18,66 +18,81 @@ component > button
   font-size: clampVw(14, 15, 16, 768);
   color: #000;
   cursor: pointer;
-
-  // @include hover {
-  //   &::before {
-  //     transform-origin: left top;
-  //     transform: scale(1, 1);
-  //   }
-  // }
 }
 
-// .button::before {
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-//   bottom: 0;
-//   left: 0;
-//   z-index: -1;
-//   background-color: #000;
-//   transform-origin: left top;
-//   transform: scale(0, 1);
-//   transition: transform .3s;
-//   content: "";
-// }
-
-// .button-arrowRight {
-//   position: relative;
-//   padding-right: min(vw(16), 1em);
-//   padding-left: min(vw(16), 1em);
-
-//   @include hover {
-//     &::after {
-//       border-right: 3px solid #000;
-//       border-bottom: 3px solid #000;
-//     }
-//   }
-// }
-
-// .button-arrowRight::after {
-//   position: absolute;
-//   top: 50%;
-//   right: 1em;
-//   transform: translateY(-50%) rotate(-45deg);
-//   width: 10px;
-//   aspect-ratio: 1 / 1;
-//   border-right: 3px solid #FFF;
-//   border-bottom: 3px solid #FFF;
-//   transition: border .3s;
-//   content: "";
-// }
-
-.buttonSubmit {
-  margin-top: min(vw(20), 20px);
-  padding-top: min(vw(20), 20px);
-  padding-bottom: min(vw(20), 20px);
-  border: 1px solid #000;
-  background-color: $Light-Blue;
-  font-size: clampVw(16, 18, 24, 768);
+.buttonArrowRight {
+  position: relative;
+  padding-right: min(vw(16), 1em);
+  padding-left: min(vw(16), 1em);
 
   @include hover {
-    border: 1px solid $Cornflower-Blue;
-    background-color: #FFF;
+    &::after {
+      transform: translate(0, -50%) rotate(-45deg);
+    }
+  }
+}
+
+.buttonArrowRightSecond {
+  @include hover {
+    &::after {
+      border-right: 3px solid $Cornflower-Blue;
+      border-bottom: 3px solid $Cornflower-Blue;
+    }
+  }
+}
+
+.buttonArrowRightFirst {
+  @include hover {
+    &::after {
+      border-right: 3px solid $Dark-Red;
+      border-bottom: 3px solid $Dark-Red;
+    }
+  }
+}
+
+.buttonArrowRight::after {
+  position: absolute;
+  top: 50%;
+  right: 1em;
+  transform: translate(-100%, -50%) rotate(-45deg);
+  width: 10px;
+  aspect-ratio: 1 / 1;
+  border-right: 3px solid #000;
+  border-bottom: 3px solid #000;
+  transition: transform .3s, border .3s;
+  content: "";
+}
+
+.buttonYoutube {
+  z-index: 5;
+  padding-top: min(vw(20), 20px);
+  padding-bottom: min(vw(20), 20px);
+  border: none;
+  border-radius: 20px;
+  background-image: linear-gradient($Light-Blue-gradation);
+  font-size: clampVw(16, 18, 24, 768);
+  transition: border .3s, background-color .3s, color .3s;
+}
+
+.buttonYoutubeSecond {
+  background-image: linear-gradient($Light-Blue-gradation);
+
+  @include hover {
+    background-image: none;
     color: $Cornflower-Blue;
   }
+}
+
+.buttonYoutubeFirst {
+  background-image: linear-gradient($Orange-Peel-gradation);
+
+  @include hover {
+    background-image: none;
+    color: $Dark-Red;
+  }
+}
+
+.buttonYoutube-inner {
+  padding-right: 1em;
+  font-weight: 700;
 }

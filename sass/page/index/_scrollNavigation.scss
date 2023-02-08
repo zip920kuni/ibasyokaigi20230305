@@ -12,6 +12,7 @@ page > top > scrollNavigation
   transform: translateX(-50%);
 
   @include responsive(md) {
+    bottom: 75px;
     left: 2%;
   }
 }

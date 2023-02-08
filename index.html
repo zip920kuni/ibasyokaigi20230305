@@ -11,36 +11,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet" />
 
     <!-- アイコン -->
-    <!-- <link rel="shortcut icon" href="【ファイル名.ico】"> -->
-    <!-- <link rel="icon" href="【ファイル名.ico】"> -->
-    <!-- <link rel="apple-touch-icon" href="【画像のパス/apple-touch-icon.png】"> -->
+    <link rel="shortcut icon" href="images/asset/favicon.ico" />
+    <link rel="icon" href="images/asset/icon-192x192.png" />
+    <link rel="apple-touch-icon" href="images/asset/apple-touch-icon-180x180.png" />
 
     <!-- Facebook-OGP -->
-    <!-- <meta property="og:url" content="【ページのURL】"> -->
-    <!-- <meta property="og:title" content="【ページのタイトル】"> -->
-    <meta property="og:type" content="website">
-    <!-- <meta property="og:type" content="article"> -->
-    <!-- <meta property="og:description" content="【ページの説明】"> -->
-    <!-- <meta property="og:image" content="【サムネイル画像のURL】"> -->
-    <!-- <meta property="og:site_name" content="【サイトのタイトル】"> -->
-    <!-- <meta property="og:locale" content="ja_JP"> -->
-    <!-- <meta property="fb:app_id" content="【appID】"> -->
+    <meta property="og:url" content="https://zip920kuni.github.io/ibasyokaigi20230305/" />
+    <meta property="og:title" content="超！居場所会議" />
+    <meta property="og:type" content="website" />
+    <!-- <meta property="og:type" content="article" /> -->
+    <meta property="og:description" content="これからの日本ひきこもり居場所会議" />
+    <meta property="og:image" content="images/asset/ogp.png" />
+    <meta property="og:site_name" content="超！居場所会議" />
+    <meta property="og:locale" content="ja_JP" />
 
     <!-- Twitter-OGP -->
-    <!-- <meta name="twitter:card" content="summary_large_image"> -->
-    <!-- <meta name="twitter:site" content="【@ユーザー名】"> -->
-    <!-- <meta name="twitter:description" content="【ページの説明】"> -->
-    <!-- <meta name="twitter:image:src" content="【サムネイル画像のURL】"> -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@COMOLY1" />
+    <meta name="twitter:description" content="これからの日本ひきこもり居場所会議" />
+    <meta name="twitter:image:src" content="images/asset/ogp.png" />
 
     <!-- css -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/index.css" />
 
     <!-- javascript -->
     <script src="js/main.js" defer></script>
 
     <!-- クローラー制御 -->
-    <meta name="robots" content="noindex, nofollow" />
-    <!-- <meta name="robots" content="index,follow"> -->
+    <!-- <meta name="robots" content="noindex, nofollow" /> -->
+    <meta name="robots" content="index,follow" />
   </head>
   <body>
     <div id="top"></div>
@@ -51,8 +51,8 @@
     <header class="header" id="js-header">
       <div class="header-column">
         <h1 class="logo">
-          <a class="logoLink" href="#">
-            <img class="logoLink-image" src="" alt="超！居場所会議" />
+          <a class="logoLink" href="index.html">
+            <img class="logoLink-image" src="images/asset/logo.svg" alt="超！居場所会議" width="398" height="41"/>
           </a>
         </h1>
 
@@ -68,9 +68,6 @@
                 <li class="menuList-item">
                   <a class="menuList-itemLink Link" href="index.html">ホーム</a>
                 </li>
-                <!-- <li class="menuList-item">
-                  <a class="menuList-itemLink Link" href="program.html">プログラム</a>
-                </li> -->
                 <li class="menuList-item">
                   <a class="menuList-itemLink Link" href="panelist.html">講師･パネリスト</a>
                 </li>
@@ -82,9 +79,6 @@
                   <li class="menuList-item hamburgerMenuList-item">
                     <a class="menuList-itemLink Link hamburgerMenuList-itemLink js-menuListItemLink" href="index.html">ホーム</a>
                   </li>
-                  <!-- <li class="menuList-item">
-                    <a class="menuList-itemLink Link hamburgerMenuList-itemLink js-menuListItemLink" href="program.html">プログラム</a>
-                  </li> -->
                   <li class="menuList-item">
                     <a class="menuList-itemLink Link hamburgerMenuList-itemLink js-menuListItemLink" href="panelist.html">講師･パネリスト</a>
                   </li>
@@ -133,7 +127,9 @@
                   <div class="titleArea-mainTitle-middle-inner">
                     <span class="ColorIndigoBlue">議</span>
                     <div class="titleArea-mainTitle-balloon titleArea-mainTitle-animationThird">
-                      <span class="ColorPurpleOuter">II</span>
+                      <span class="titleArea-mainTitle-balloon-small ColorPurpleOuter">第</span>
+                      <span class="titleArea-mainTitle-balloon-large ColorPurpleOuter">２</span>
+                      <span class="titleArea-mainTitle-balloon-small ColorPurpleOuter">回</span>
                     </div>
                     <!-- /.titleArea-mainTitle-balloon titleArea-mainTitle-animationThird -->
                   </div>
@@ -179,12 +175,12 @@
       <!-- /.scrollNavigation -->
 
       <section class="section sectionAboutTop">
-        <div class="container js-fadeIn">
-          <h2 class="headingLv2Area">
+        <div class="container">
+          <h2 class="headingLv2Area js-fadeIn">
             <span class="headingLv2Area-text">超！居場所会議とは</span>
           </h2>
 
-          <div class="aboutTop FlexPc">
+          <div class="aboutTop FlexPc js-fadeInRelaxed">
             <div class="aboutTop-image">
               <img class="aboutTop-image-inner" src="images/ibasho1.jpg" alt="公演中の新聞記事" width="1852" height="1435"/>
             </div>
@@ -317,12 +313,12 @@
       </section>
 
       <section class="section sectionInformationTop" id="information">
-        <div class="container containerTight js-fadeIn">
-          <h2 class="headingLv2Area">
+        <div class="container containerTight">
+          <h2 class="headingLv2Area js-fadeIn">
             <span class="headingLv2Area-text">開催案内</span>
           </h2>
 
-          <dl class="informationTopList">
+          <dl class="informationTopList js-fadeIn">
             <div class="informationTopList-item">
               <dt class="informationTopList-item-title">開催日</dt>
               <dd class="informationTopList-item-description"><time datetime="2023-03-05">2023年3月5日</time><span class="ColorRed">（日）</span>
@@ -363,12 +359,29 @@
 
       <section class="section section sectionYouTubeTop" id="youtube">
         <div class="container containerTight">
-          <h2 class="headingLv2Area">
+          <h2 class="headingLv2Area js-fadeIn">
             <span class="headingLv2Area-text">YOUTUBE配信</span>
           </h2>
 
-          <div class="youtubeArea">
-            <iframe class="youtubeArea-inner" width="560" height="315" src="https://www.youtube.com/embed/Fmh4W42SapU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <div class="youtubeArea js-fadeIn">
+            <iframe class="youtubeArea-inner" width="940" height="530" src="https://www.youtube.com/embed/5FWMilfQqx0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+            <div class="youtubeArea-buttonArea FlexPc">
+              <div class="gradationArea gradationAreaSecond gradationAreaButton">
+                <button class="button buttonArrowRight buttonArrowRightSecond buttonYoutube buttonYoutubeSecond" onclick="location.href='//www.youtube.com/watch?v=5FWMilfQqx0'" type="button">
+                  <span class="button-inner buttonYoutube-inner">配信ページはこちら</span>
+                </button>
+              </div>
+              <!-- /.gradationArea gradationAreaButton -->
+
+              <div class="gradationArea gradationAreaFirst gradationAreaButton">
+                <button class="button buttonArrowRight buttonArrowRightFirst buttonYoutube buttonYoutubeFirst" onclick="location.href='//www.youtube.com/watch?v=Fmh4W42SapU'" type="button">
+                  <span class="button-inner buttonYoutube-inner">第１回の配信はこちら</span>
+                </button>
+              </div>
+              <!-- /.gradationArea gradationAreaButton -->
+            </div>
+            <!-- /.youtubeArea-buttonArea -->
           </div>
           <!-- /.youtubeArea -->
         </div>
@@ -377,7 +390,7 @@
 
       <section class="section sectionPanelistTop">
         <div class="container containerTight">
-          <h2 class="headingLv2Area">
+          <h2 class="headingLv2Area js-fadeIn">
             <span class="headingLv2Area-text">講師･パネリスト</span>
           </h2>
 
@@ -385,10 +398,10 @@
             <li class="panelistTopList-item js-fadeIn">
               <a class="panelistTopList-itemLink Link" href="panelist.html#muta">
                 <div class="card">
-                  <div class="card-image">
+                  <picture class="card-image">
+                    <source class="card-image-inner" media="(max-width: 767px)" srcset="images/panelist_muta-sp.jpg" alt="登壇者　牟田光生の写真" width="270" height="270" />
                     <img class="card-image-inner" src="images/panelist_muta.jpg" alt="登壇者　牟田光生の写真" width="240" height="320"/>
-                  </div>
-                  <!-- /.card-image -->
+                  </picture>
 
                   <div class="card-body">
                     <p class="card-body-name TextCenter">牟田 光生</p>
@@ -406,10 +419,10 @@
             <li class="panelistTopList-item js-fadeIn">
               <a class="panelistTopList-itemLink Link" href="panelist.html#ueda">
                 <div class="card">
-                  <div class="card-image">
+                  <picture class="card-image">
+                    <source class="card-image-inner" media="(max-width: 767px)" srcset="images/panelist_ueda-sp.jpg" alt="登壇者　上田理香の写真" width="270" height="270" />
                     <img class="card-image-inner" src="images/panelist_ueda.jpg" alt="登壇者　上田理香の写真" width="240" height="320"/>
-                  </div>
-                  <!-- /.card-image -->
+                  </picture>
 
                   <div class="card-body">
                     <p class="card-body-name TextCenter">上田 理香</p>
@@ -426,10 +439,10 @@
             <li class="panelistTopList-item js-fadeIn">
               <a class="panelistTopList-itemLink Link" href="panelist.html#kawamata">
                 <div class="card">
-                  <div class="card-image">
+                  <picture class="card-image">
+                    <source class="card-image-inner" media="(max-width: 767px)" srcset="images/panelist_kawamata-sp.jpg" alt="登壇者　川又直の写真" width="270" height="270" />
                     <img class="card-image-inner" src="images/panelist_kawamata.jpg" alt="登壇者　川又直の写真" width="240" height="320"/>
-                  </div>
-                  <!-- /.card-image -->
+                  </picture>
 
                   <div class="card-body">
                     <p class="card-body-name TextCenter">川又 直</p>
@@ -446,10 +459,10 @@
             <li class="panelistTopList-item js-fadeIn">
               <a class="panelistTopList-itemLink Link" href="panelist.html#miyata">
                 <div class="card">
-                  <div class="card-image">
+                  <picture class="card-image">
+                    <source class="card-image-inner" media="(max-width: 767px)" srcset="images/panelist_miyata-sp.jpg" alt="登壇者　宮田隼の写真" width="270" height="270" />
                     <img class="card-image-inner" src="images/panelist_miyata.jpg" alt="登壇者　宮田隼の写真" width="240" height="320"/>
-                  </div>
-                  <!-- /.card-image -->
+                  </picture>
 
                   <div class="card-body">
                     <p class="card-body-name TextCenter">宮田 隼</p>
@@ -466,10 +479,10 @@
             <li class="panelistTopList-item js-fadeIn">
               <a class="panelistTopList-itemLink Link" href="panelist.html#matsui">
                 <div class="card">
-                  <div class="card-image">
+                  <picture class="card-image">
+                    <source class="card-image-inner" media="(max-width: 767px)" srcset="images/panelist_matsui-sp.jpg" alt="登壇者　松居和世の写真" width="270" height="270" />
                     <img class="card-image-inner" src="images/panelist_matsui.jpg" alt="登壇者　松居和世の写真" width="240" height="320"/>
-                  </div>
-                  <!-- /.card-image -->
+                  </picture>
 
                   <div class="card-body">
                     <p class="card-body-name TextCenter">松居 和世</p>
@@ -486,10 +499,10 @@
             <li class="panelistTopList-item js-fadeIn">
               <a class="panelistTopList-itemLink Link" href="panelist.html#yamada">
                 <div class="card">
-                  <div class="card-image">
+                  <picture class="card-image">
+                    <source class="card-image-inner" media="(max-width: 767px)" srcset="images/panelist_yamada-sp.jpg" alt="登壇者　山田邦生の写真" width="270" height="270" />
                     <img class="card-image-inner" src="images/panelist_yamada.jpg" alt="登壇者　山田邦生の写真" width="240" height="320"/>
-                  </div>
-                  <!-- /.card-image -->
+                  </picture>
 
                   <div class="card-body">
                     <p class="card-body-name TextCenter">山田 邦生</p>
@@ -509,12 +522,12 @@
       </section>
 
       <section class="section sectionAccessTop">
-        <div class="container containerTight">
-          <h2 class="headingLv2Area">
+        <div class="container containerTigh">
+          <h2 class="headingLv2Area js-fadeIn">
             <span class="headingLv2Area-text">アクセス</span>
           </h2>
 
-          <div class="accessAreaTop FlexPc">
+          <div class="accessAreaTop FlexPc js-fadeIn">
             <div class="accessAreaTop-map">
               <iframe class="accessAreaTop-map-inner" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3199.1212194105506!2d137.21021241587678!3d36.69562488127781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff79085f46ab90f%3A0x4b0270cea75a2c2d!2z5a-M5bGx55yM5rCR5Lya6aSo!5e0!3m2!1sja!2sjp!4v1675574874694!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
@@ -523,7 +536,7 @@
             <ul class="accessAreaTopList">
               <li class="accessAreaTopList-item">
                 <p class="accessAreaTopList-item-title">【鉄道】</p>
-                <p class="accessAreaTopList-item-description">JR富山駅（南口）<br>あいの風とやま鉄道富山駅（南口）<br>富山地方鉄道富山駅から徒歩10分</p>
+                <p class="accessAreaTopList-item-description">JR富山駅(南口)<br>あいの風とやま鉄道富山駅(南口)<br>富山地方鉄道富山駅から徒歩10分</p>
               </li>
 
               <li class="accessAreaTopList-item">

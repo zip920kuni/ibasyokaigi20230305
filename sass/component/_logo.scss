@@ -6,12 +6,7 @@ component > logo
 */
 .logo {
   position: relative;
-  // top: calc(min(vw(5), 5px) * -1);
   z-index: 10;
-  width: clampVw(145, 155, 200, 768);
-
-  // @include responsive(md) {
-  //   top: 0;
-  //   margin-right: min(vw(12), 40px);
-  // }
+  width: clampVw(200, 280, 398, 768);
+  aspect-ratio: 398 / 41;
 }

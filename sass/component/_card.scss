@@ -6,17 +6,22 @@ component > card
 */
 .card-image {
   width: min(100%, 360px);
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 1 / 1;
 
   @include responsive(md) {
     width: min(100%, 280px);
+    aspect-ratio: 3 / 4;
   }
 }
 
 .card-image-inner {
   width: 100%;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
+
+  @include responsive(md) {
+    aspect-ratio: 3 / 4;
+  }
 }
 
 .card-body {
@@ -49,7 +54,7 @@ component > card
 }
 
 .card-body-inner-comment {
-  width: min(75%, 270px);
+  width: min(82.5%, 160px);
   margin-right: auto;
   margin-left: auto;
   font-size: clampVw(16, 16.8, 18, 768);

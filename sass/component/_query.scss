@@ -24,7 +24,7 @@ component > query
 .query-item-top {
   display: flex;
   margin-top: min(vw(5), 5px);
-  font-size: clampVw(16, 16.8, 18, 768);
+  font-size: clampVw(14, 16.8, 18, 768);
 
   @include responsive(md) {
     margin-top: 0;
@@ -37,7 +37,7 @@ component > query
 
 .query-item-bottom {
   display: flex;
-  font-size: clampVw(16, 16.8, 18, 768);
+  font-size: clampVw(14, 15.8, 18, 768);
 }
 
 .query-item-bottom-fax {

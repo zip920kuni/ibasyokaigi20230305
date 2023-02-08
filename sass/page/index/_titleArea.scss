@@ -93,11 +93,12 @@ page > top > titleArea
 }
 
 .titleArea-mainTitle-balloon {
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   top: -100%;
-  right: -100%;
+  right: -90%;
   width: min(vw(60), 150px);
   aspect-ratio: 1 / 1;
   background-color: $Electric-Purple;
@@ -118,6 +119,19 @@ page > top > titleArea
   background-color: $Electric-Purple;
   clip-path: polygon(60% 0, 0% 100%, 100% 40%);
   content: "";
+}
+
+.titleArea-mainTitle-balloon-small {
+  margin-top: 6%;
+  font-size: clampVw(16, 24, 32, 768);
+
+  @include responsive(md) {
+    margin-top: clampVw(0, 10, 10, 1280);
+  }
+}
+
+.titleArea-mainTitle-balloon-large {
+  font-size: clampVw(20, 30, 48, 768);
 }
 
 .titleArea-mainTitle-animationThird {

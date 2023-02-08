@@ -1,0 +1,38 @@
+@use "../../global" as *; //アスタリスクをつけてglobalフォルダから参照
+
+/*!
+page > top > youtubeArea
+------------------------------
+*/
+.youtubeArea {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  margin-top: min(vw(50), 50px);
+  margin-right: auto;
+  margin-left: auto;
+
+  @include responsive(md) {
+    width: min(100%, 940px);
+  }
+}
+
+.youtubeArea-inner {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.youtubeArea-buttonArea {
+  margin-top: min(vw(30), 30px);
+}
+
+.youtubeArea-buttonArea > * + * {
+  margin-top: min(vw(20), 20px);
+
+  @include responsive(md) {
+    margin-top: 0;
+    margin-left: min(vw(20), 20px);
+  }
+}

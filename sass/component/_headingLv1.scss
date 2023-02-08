@@ -9,6 +9,6 @@ component > headingLv1
   top: 50%;
   width: 100%;
   transform: translateY(-50%);
-  font-size: clampVw(48, 64, 80, 768);
+  font-size: clampVw(40, 64, 80, 768);
   text-align: center;
 }
