@@ -5,6 +5,7 @@ window.addEventListener('DOMContentLoaded', () => {
   headerObserver();
   fadeIn();
   fadeInRelaxed();
+  fadeInPanelist();
 });
 
 
@@ -235,7 +236,7 @@ function fadeInRelaxed() {
   const options = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.2,
+    threshold: .2,
   };
 
   const observer = new IntersectionObserver(doIntersect, options);
@@ -257,6 +258,47 @@ function fadeInRelaxed() {
           entry.target.classList.remove('Is-In');
           entry.target.classList.add('Is-Out');
         }, 1);
+      }
+    });
+  }
+}
+
+
+// パネリスト一覧のフェードイン制御
+function fadeInPanelist() {
+  const FadeIns = document.querySelectorAll('.js-fadeInPanelist'); // js-fadeInPanelistを指定した要素に適用
+  const urlHash = location.hash; // URLの#以降の部分を取得
+
+  const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: .3,
+  };
+
+  const observer = new IntersectionObserver(doIntersect, options);
+
+  FadeIns.forEach((e) => {
+    observer.observe(e);
+  });
+
+  function doIntersect(entries, observer) {
+    entries.forEach((entry) => {
+      if (urlHash) {
+        return;
+      }
+      else {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.remove('Is-Out');
+            entry.target.classList.add('Is-In');
+            observer.unobserve(entry.target);
+          }, 1);
+        } else {
+          setTimeout(() => {
+            entry.target.classList.remove('Is-In');
+            entry.target.classList.add('Is-Out');
+          }, 1);
+        }
       }
     });
   }
