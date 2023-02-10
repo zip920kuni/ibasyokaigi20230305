@@ -25,8 +25,7 @@ page > top > informationTop
   padding-bottom: min(vw(20), 20px);
 }
 
-.informationTopList-item-title,
-.informationTopList-item-inner-title {
+.informationTopList-item-title {
   width: 30%;
   font-size: clampVw(16, 18, 24, 768);
   font-weight: 700;
@@ -37,39 +36,26 @@ page > top > informationTop
   }
 }
 
-.informationTopList-item-inner {
-  display: flex;
-
-  @include responsive(md) {
-    width: 50%;
-  }
-}
-
-.informationTopList-item-inner:first-of-type {
+.informationTopList-item-left {
   padding-bottom: min(vw(20), 20px);
 
   @include responsive(md) {
+    width: 50%;
     padding-bottom: 0;
   }
 }
 
-.informationTopList-item-inner:not(:first-of-type) {
+.informationTopList-item-right {
   border-top: 1px dotted #000;
   padding-top: min(vw(20), 20px);
 
   @include responsive(md) {
+    width: 50%;
     border-top: none;
     padding-top: 0;
   }
 }
 
-.informationTopList-item-inner-title {
-  @include responsive(md) {
-    width: 40%;
-  }
-}
-
-.informationTopList-item-description,
-.informationTopList-item-inner-description {
+.informationTopList-item-description {
   font-size: clampVw(16, 18, 24, 768);
 }

@@ -202,9 +202,11 @@ component > backToTop
   bottom: 25px;
   aspect-ratio: 1/1;
   width: min(15%, 50px);
+  padding: 0;
   border: 1px solid #FFF;
   border-radius: 50%;
   background-color: #ABD5E7;
+  cursor: pointer;
   transition: opacity 0.3s, visibility 0.3s;
 }
 .backToTop:focus {
@@ -247,6 +249,17 @@ component > backToTop
   opacity: 1;
 }
 
+.backToTopLink {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.backToTopLink-hidden {
+  display: none;
+}
+
 /*!
 component > hamburger
 ------------------------------
@@ -274,6 +287,10 @@ component > hamburger
   width: 130%;
   height: 250%;
   content: "";
+}
+
+.hamburger-hidden {
+  display: none;
 }
 
 .hamburger-line {
@@ -738,9 +755,11 @@ component > media
 
 .media-image-inner {
   -o-object-fit: cover;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
   aspect-ratio: 1/1;
   width: 100%;
      object-fit: cover;
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .media-body {
@@ -757,7 +776,6 @@ component > media
   font-size: clamp(1rem, 2.1875vw, 1.125rem);
   line-height: 1.8;
 }
-
 .media-body-description::before {
   display: block;
   width: 0;
@@ -765,7 +783,6 @@ component > media
   margin-top: calc((1 - 1.8) * 0.5em);
   content: "";
 }
-
 .media-body-description::after {
   display: block;
   width: 0;
@@ -818,6 +835,8 @@ component > gradationArea
 
 .gradationAreaButton {
   width: min(100%, 400px);
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .gradationAreaButton::after {
@@ -964,6 +983,7 @@ utility > hover
 utility > utility
 ------------------------------
 */
+
 .OnlyPc {
   display: none;
 }
@@ -1234,6 +1254,10 @@ sp
 
   .media-bodyLarge {
     margin-top: 15%;
+  }
+
+  .gradationAreaButton:not(:first-of-type) {
+    margin-left: min(8vw, 30px);
   }
 
   .OnlySp {

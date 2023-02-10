@@ -42,6 +42,8 @@ component > gradationArea
 
 .gradationAreaButton {
   width: min(100%, 400px);
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .gradationAreaButton::after {
@@ -49,4 +51,10 @@ component > gradationArea
   left: 2px;
   width: calc(100% - 4px);
   height: calc(100% - 4px);
+}
+
+.gradationAreaButton:not(:first-of-type) {
+  @include responsive(md) {
+    margin-left: min(vw(30), 30px);
+  }
 }

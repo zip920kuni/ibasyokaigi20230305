@@ -32,6 +32,10 @@ component > hamburger
   content: "";
 }
 
+.hamburger-hidden {
+  display: none;
+}
+
 .hamburger-line {
   display: block;
   position: absolute;

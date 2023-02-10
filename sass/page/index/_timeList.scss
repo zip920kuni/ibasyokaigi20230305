@@ -1,0 +1,28 @@
+@use "../../global" as *; //アスタリスクをつけてglobalフォルダから参照
+
+/*!
+page > top > timeList
+------------------------------
+*/
+.timeList {
+  display: flex;
+
+  @include responsive(md) {
+    width: 100%;
+  }
+}
+
+.timeList-title {
+  width: 30%;
+  font-size: clampVw(16, 18, 24, 768);
+  font-weight: 700;
+
+  @include responsive(md) {
+    width: 40%;
+    padding-left: 10px;
+  }
+}
+
+.timeList-description {
+  font-size: clampVw(16, 18, 24, 768);
+}

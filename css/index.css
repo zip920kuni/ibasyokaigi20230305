@@ -592,30 +592,42 @@ page > top > informationTop
   padding-bottom: min(5.3333333333vw, 20px);
 }
 
-.informationTopList-item-title,
-.informationTopList-item-inner-title {
+.informationTopList-item-title {
   width: 30%;
   font-weight: 700;
   font-size: clamp(1rem, 2.34375vw, 1.5rem);
 }
 
-.informationTopList-item-inner {
+.informationTopList-item-left {
+  padding-bottom: min(5.3333333333vw, 20px);
+}
+
+.informationTopList-item-right {
+  padding-top: min(5.3333333333vw, 20px);
+  border-top: 1px dotted #000;
+}
+
+.informationTopList-item-description {
+  font-size: clamp(1rem, 2.34375vw, 1.5rem);
+}
+
+/*!
+page > top > timeList
+------------------------------
+*/
+.timeList {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.informationTopList-item-inner:first-of-type {
-  padding-bottom: min(5.3333333333vw, 20px);
+.timeList-title {
+  width: 30%;
+  font-weight: 700;
+  font-size: clamp(1rem, 2.34375vw, 1.5rem);
 }
 
-.informationTopList-item-inner:not(:first-of-type) {
-  padding-top: min(5.3333333333vw, 20px);
-  border-top: 1px dotted #000;
-}
-
-.informationTopList-item-description,
-.informationTopList-item-inner-description {
+.timeList-description {
   font-size: clamp(1rem, 2.34375vw, 1.5rem);
 }
 
@@ -910,27 +922,29 @@ sp
     padding-left: 4%;
   }
 
-  .informationTopList-item-title,
-  .informationTopList-item-inner-title {
+  .informationTopList-item-title {
     width: 20%;
     padding-left: 10px;
   }
 
-  .informationTopList-item-inner {
+  .informationTopList-item-left {
     width: 50%;
-  }
-
-  .informationTopList-item-inner:first-of-type {
     padding-bottom: 0;
   }
 
-  .informationTopList-item-inner:not(:first-of-type) {
+  .informationTopList-item-right {
+    width: 50%;
     padding-top: 0;
     border-top: none;
   }
 
-  .informationTopList-item-inner-title {
+  .timeList {
+    width: 100%;
+  }
+
+  .timeList-title {
     width: 40%;
+    padding-left: 10px;
   }
 
   .youtubeArea {
@@ -939,7 +953,6 @@ sp
 
   .youtubeArea-buttonArea > * + * {
     margin-top: 0;
-    margin-left: min(8vw, 30px);
   }
 
   .panelistTopList {

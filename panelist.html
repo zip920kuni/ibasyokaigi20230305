@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>超！居場所会議</title>
+    <title>講師･パネリスト｜超！居場所会議</title>
     <meta name="description" content="これからの日本ひきこもり居場所会議" />
     <meta name="format-detection" content="telephone=no" />
     <!-- フォント -->
@@ -69,13 +69,14 @@
     <!-- header -->
     <header class="header" id="js-header">
       <div class="header-column">
-        <h1 class="logo">
+        <div class="logo">
           <a class="logoLink" href="index.html">
-            <img class="logoLink-image" src="images/asset/logo.svg" alt="超！居場所会議" />
+            <img class="logoLink-image" src="images/asset/logo.svg" alt="超！居場所会議" decoding="async" width="398" height="41" />
           </a>
-        </h1>
+        </div>
 
         <button class="hamburger" id="js-hamburger" type="button">
+          <span class="hamburger-hidden">ハンバーガーメニュー</span>
           <span class="hamburger-line"></span>
           <span class="hamburger-text"></span>
         </button>
@@ -141,10 +142,10 @@
 
       <div class="panelist">
         <div class="container containerTight">
-          <ul class="panelistList js-fadeIn">
+          <div class="panelistList js-fadeIn">
             <p class="panelist-List-announce TextCenter">講師･パネリスト一覧</p>
 
-            <div class="panelistList-inner">
+            <ul class="panelistList-inner">
               <li class="panelistList-inner-item">
                 <a class="panelistList-inner-itemLink Link" href="#muta">牟田 光生</a>
               </li>
@@ -163,11 +164,11 @@
               <li class="panelistList-inner-item">
                 <a class="panelistList-inner-itemLink Link" href="#yamada">山田 邦生</a>
               </li>
-            </div>
-            <!-- /.panelistList-inner -->
+            </ul>
 
             <p class="panelist-List-comment TextRight">(順不同･敬称略)</p>
-          </ul>
+          </div>
+          <!-- /.panelistList -->
         </div>
         <!-- /.container containerTight -->
       </div>
@@ -184,8 +185,8 @@
               <div class="media">
                 <div class="container containerSnug FlexPc">
                   <picture class="media-image">
-                    <source class="media-image-inner" media="(max-width: 767px)" srcset="images/panelist_muta-sp.jpg" alt="登壇者　牟田光生の写真" width="270" height="270" />
-                    <img class="media-image-inner" src="images/panelist_muta.jpg" alt="登壇者　牟田光生の写真" width="240" height="320"/>
+                    <source class="media-image-inner" media="(max-width: 767px)" srcset="images/panelist_muta-sp.jpg" width="270" height="270" />
+                    <img class="media-image-inner" src="images/panelist_muta.jpg" alt="登壇者　牟田光生の写真" decoding="async" width="240" height="320"/>
                   </picture>
 
                   <div class="media-body">
@@ -204,8 +205,8 @@
               <div class="media mediaReverse mediaLarge">
                 <div class="container containerSnug FlexReversePc">
                   <picture class="media-image">
-                    <source class="media-image-inner" media="(max-width: 767px)" srcset="images/panelist_ueda-sp.jpg" alt="登壇者　上田理香の写真" width="270" height="270" />
-                    <img class="media-image-inner" src="images/panelist_ueda.jpg" alt="登壇者　上田理香の写真" width="240" height="320"/>
+                    <source class="media-image-inner" media="(max-width: 767px)" srcset="images/panelist_ueda-sp.jpg" width="270" height="270" />
+                    <img class="media-image-inner" src="images/panelist_ueda.jpg" alt="登壇者　上田理香の写真" decoding="async" width="240" height="320"/>
                   </picture>
 
                   <div class="media-body media-bodyLarge">
@@ -224,8 +225,8 @@
               <div class="media">
                 <div class="container containerSnug FlexPc">
                   <picture class="media-image">
-                    <source class="media-image-inner" media="(max-width: 767px)" srcset="images/panelist_kawamata-sp.jpg" alt="登壇者　川又直の写真" width="270" height="270" />
-                    <img class="media-image-inner" src="images/panelist_kawamata.jpg" alt="登壇者　川又直の写真" width="240" height="320"/>
+                    <source class="media-image-inner" media="(max-width: 767px)" srcset="images/panelist_kawamata-sp.jpg" width="270" height="270" />
+                    <img class="media-image-inner" src="images/panelist_kawamata.jpg" alt="登壇者　川又直の写真" decoding="async" width="240" height="320"/>
                   </picture>
 
                   <div class="media-body">
@@ -244,8 +245,8 @@
               <div class="media mediaReverse">
                 <div class="container containerSnug FlexReversePc">
                   <picture class="media-image">
-                    <source class="media-image-inner" media="(max-width: 767px)" srcset="images/panelist_miyata-sp.jpg" alt="登壇者　宮田隼の写真" width="270" height="270" />
-                    <img class="media-image-inner" src="images/panelist_miyata.jpg" alt="登壇者　宮田隼の写真" width="240" height="320"/>
+                    <source class="media-image-inner" media="(max-width: 767px)" srcset="images/panelist_miyata-sp.jpg" width="270" height="270" />
+                    <img class="media-image-inner" src="images/panelist_miyata.jpg" alt="登壇者　宮田隼の写真" decoding="async" width="240" height="320"/>
                   </picture>
 
                   <div class="media-body">
@@ -264,8 +265,8 @@
               <div class="media">
                 <div class="container containerSnug FlexPc">
                   <picture class="media-image">
-                    <source class="media-image-inner" media="(max-width: 767px)" srcset="images/panelist_matsui-sp.jpg" alt="登壇者　松居和世の写真" width="270" height="270" />
-                    <img class="media-image-inner" src="images/panelist_matsui.jpg" alt="登壇者　松居和世の写真" width="240" height="320"/>
+                    <source class="media-image-inner" media="(max-width: 767px)" srcset="images/panelist_matsui-sp.jpg" width="270" height="270" />
+                    <img class="media-image-inner" src="images/panelist_matsui.jpg" alt="登壇者　松居和世の写真" decoding="async" width="240" height="320"/>
                   </picture>
 
                   <div class="media-body">
@@ -284,8 +285,8 @@
               <div class="media mediaReverse">
                 <div class="container containerSnug FlexReversePc">
                   <picture class="media-image">
-                    <source class="media-image-inner" media="(max-width: 767px)" srcset="images/panelist_yamada-sp.jpg" alt="登壇者　山田邦生の写真" width="270" height="270" />
-                    <img class="media-image-inner" src="images/panelist_yamada.jpg" alt="登壇者　山田邦生の写真" width="240" height="320"/>
+                    <source class="media-image-inner" media="(max-width: 767px)" srcset="images/panelist_yamada-sp.jpg" width="270" height="270" />
+                    <img class="media-image-inner" src="images/panelist_yamada.jpg" alt="登壇者　山田邦生の写真" decoding="async" width="240" height="320"/>
                   </picture>
 
                   <div class="media-body">
@@ -343,6 +344,10 @@
     <!-- footer -->
     <div class="backToTop-observationPoint" id="js-observationPoint"></div>
     <!-- /#js-observationPoint.back-to-top_observation-point -->
-    <button class="backToTop" id="js-backToTop" href="#top" type="button"></button>
+    <button class="backToTop" id="js-backToTop" type="button">
+      <a class="backToTopLink" href="#top">
+        <span class="backToTopLink-hidden">Top</span>
+      </a>
+    </button>
   </body>
 </html>

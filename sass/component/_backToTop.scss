@@ -20,9 +20,11 @@ component > backToTop
   bottom: 25px;
   width: min(15%, 50px);
   aspect-ratio: 1/1;
+  padding: 0;
   border: 1px solid #FFF;
   border-radius: 50%;
   background-color: $Light-Blue;
+  cursor: pointer;
   transition: opacity .3s, visibility .3s;
 
   @include hover {
@@ -62,4 +64,24 @@ component > backToTop
 .backToTop.is-active {
   opacity: 1;
   visibility: visible;
+}
+
+.backToTopLink {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+// .backToTopLink::before {
+//   position: absolute;
+//   top: -75%;
+//   left: -5%;
+//   width: 110%;
+//   height: 250%;
+//   content: "";
+// }
+
+.backToTopLink-hidden {
+  display: none;
 }
